@@ -2,28 +2,32 @@ package escuelIt;
 
 public class Tablero {
 
-	private char[][] casillas;
+//	private char[][] casillas;
+	
+	private Coordenada[][] fichas;
+	
 	private static final int DIMENSION = 3;
 	private static final char VACIA = '_';
 	
 	public Tablero() {
-		casillas = new char[DIMENSION][DIMENSION];
-		for(int i=0; i<DIMENSION;i++) {
-			for(int j=0; j<DIMENSION;j++) {
-				casillas[i][j] = VACIA;
-			}
-		}
+		fichas = new Coordenada[2][3];
 	}
 	
 	public void mostrar() {
 		GestorIO gestorIO = new GestorIO();
 		for(int i=0; i<DIMENSION; i++) {
 			for(int j=0; j< DIMENSION; j++) {
-				gestorIO.out(" " + casillas[i][j]);
+				gestorIO.out(this.getColor(new Coordenada(i,j)));
 			}
 			gestorIO.out("\n");
 		}
 		gestorIO.out("\n");
+	}
+	
+	
+
+	private String getColor(Coordenada coordenada) {
+		return ''; //37:26
 	}
 
 	public boolean hayTresEnRaya() {
