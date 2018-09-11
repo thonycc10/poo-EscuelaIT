@@ -1,4 +1,4 @@
-package escuelIt;
+package tresEnRaya;
 
 class TresEnRaya {
 	

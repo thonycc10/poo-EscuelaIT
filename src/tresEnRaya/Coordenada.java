@@ -1,4 +1,4 @@
-package escuelIt;
+package tresEnRaya;
 
 public class Coordenada {
 
@@ -47,6 +47,22 @@ public class Coordenada {
 	public boolean igual(Coordenada coordenada) {
 		assert coordenada != null;
 		return fila == coordenada.fila && columna == coordenada.columna;
+	}
+
+	public int direccion(Coordenada coordenada) {
+		if(fila == coordenada.fila) {
+			return 0;
+		}
+		if(columna == coordenada.columna) {
+			return 1;
+		}
+		if(fila - coordenada.fila == 0 && columna - coordenada.columna == 0) {
+			return 2;
+		}
+		if(fila + coordenada.fila == 4 && columna + coordenada.columna == 4) {
+			return 3;
+		}
+		return -1;
 	}
 
 }

@@ -1,4 +1,4 @@
-package escuelIt;
+package tresEnRaya;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
